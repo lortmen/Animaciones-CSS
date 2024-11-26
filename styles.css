@@ -1,0 +1,124 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Basic Box Style */
+.box {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* 1. Transition */
+.transition-box {
+    background-color: #3498db;
+    transition: background-color 0.5s, transform 0.5s;
+}
+.transition-box:hover {
+    background-color: #e74c3c;
+    transform: scale(1.2);
+}
+
+/* 2. Keyframes Movement */
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+.movement-box {
+    background-color: #2ecc71;
+    animation: move 2s infinite;
+}
+
+/* 3. Rotation */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.rotation-box {
+    background-color: #f1c40f;
+    animation: rotate 2s linear infinite;
+}
+
+/* 4. Fade In and Out */
+@keyframes fade {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+.fade-box {
+    background-color: #9b59b6;
+    animation: fade 3s infinite;
+}
+
+/* 5. Scaling */
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.scale-box {
+    background-color: #e67e22;
+    animation: scale 1.5s infinite;
+}
+
+/* 6. Bounce */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+.bounce-box {
+    background-color: #e74c3c;
+    animation: bounce 1s infinite;
+}
+
+/* 7. Color Change */
+@keyframes color-change {
+    0% {
+        background-color: #1abc9c;
+    }
+    50% {
+        background-color: #3498db;
+    }
+    100% {
+        background-color: #1abc9c;
+    }
+}
+.color-box {
+    animation: color-change 3s infinite;
+}
